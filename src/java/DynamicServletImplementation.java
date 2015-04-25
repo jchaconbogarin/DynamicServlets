@@ -51,10 +51,10 @@ public class DynamicServletImplementation extends DynamicServlet
         if (actionList.contains(action.toLowerCase())) {
             String methodName = HTTPAction + Character.toUpperCase(action.charAt(0)) + action.substring(1);
             Method method = klass.getDeclaredMethod(methodName);
-            method.invoke(this, (Object[])null);
+            method.invoke(this, (Object[]) null);
         } else {
             Method method = klass.getDeclaredMethod(HTTPAction + "Index");
-            method.invoke(this, (Object[])null);
+            method.invoke(this, (Object[]) null);
         }
     }
 }

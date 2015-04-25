@@ -35,9 +35,8 @@ public abstract class DynamicServlet extends HttpServlet
     {
         assignRequestAndResponse(request, response);
         String action = request.getParameter("action");
-        if (action == null) {
-            action = "index";
-        }
+        if (action == null) action = "index";
+        
         try {
             executeAction(action, HTTPAction);
         }
